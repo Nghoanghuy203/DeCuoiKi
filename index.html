@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    
+    <div id="wapper">
+        <header id="header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlG7HG98o9uSxwz5FzwsiKq-t8KPSU11Q9xg&usqp=CAU"
+                alt="">
+        </header>
+        <div id="navbar">
+            <ul class="list-inline">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#myModal" data-target="#myModal" data-toggle="modal">Đặt lịch</a></li>
+            </ul>
+        </div>
+        <div id="table">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã bệnh nhân</th>
+                            <th>Mật khẩu</th>
+                            <th>Ngày khám</th>
+                            <th>Phụ thu dịch vụ</th>
+                            <th>Chuyên khoa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="render">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>BN-012345</td>
+                            <td>012345a</td>
+                            <td>12/08/2020</td>
+                            <td>1000000</td>
+                            <td>Ngoại tổng quát</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>BN-012345</td>
+                            <td>012345a</td>
+                            <td>12/08/2020</td>
+                            <td>1000000</td>
+                            <td>Ngoại tổng quát</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>BN-012345</td>
+                            <td>012345a</td>
+                            <td>12/08/2020</td>
+                            <td>1000000</td>
+                            <td>Ngoại tổng quát</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer id="footer">
+            <h2>21138601 - Nguyễn Hoàng Huy - DHKTPM17CTT</h2>
+        </footer>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Đặt lịch khám online</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="maBN">Mã bệnh nhân</label>
+                        <input type="text" class="form-control" id="maBN" placeholder="Mã bệnh nhân">
+                        <p class="regex-error">(*)BN-YYYYYY</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mật khẩu</label>
+                        <input type="text" class="form-control" id="password" placeholder="Mật khẩu">
+                        <p class="regex-error">(*)</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Ngày khám</label>
+                        <input type="date" class="form-control" id="date" placeholder="mm/dd/yyyy">
+                        <p class="regex-error">(*)</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="loai">Loại dịch vụ</label>
+                        <div id="loai" class="form-group">
+                            <label class="checkbox-inline"><input type="checkbox" value="" id="chkbox1">Khám bệnh theo yêu
+                                cầu</label>
+                            <label class="checkbox-inline"><input type="checkbox" value="" id="chkbox2">Điều trị ngoại trú</label>
+                            <label class="checkbox-inline"><input type="checkbox" value="" id="chkbox3">Bác sĩ theo yêu cầu</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="khoa">Chuyên khoa</label>
+                        <select class="form-control" id="khoa">
+                            <option>Ngoại tổng quát</option>
+                            <option>Nhi</option>
+                            <option>Nội tổng quát</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btnDatLich" onclick="add()">Đặt lịch</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>
